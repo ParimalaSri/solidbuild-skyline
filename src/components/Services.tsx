@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Home, Building, Tool, TrendingUp, Compass, Rocket } from 'lucide-react';
+import { Home, Building, Wrench, TrendingUp, Compass, Rocket } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface Service {
@@ -22,7 +22,7 @@ const Services: React.FC = () => {
       description: "Modern commercial spaces that balance aesthetics, functionality, and cost efficiency."
     },
     {
-      icon: <Tool className="h-6 w-6" />,
+      icon: <Wrench className="h-6 w-6" />,
       title: "Renovations & Remodels",
       description: "Transform existing structures with innovative design and quality craftsmanship."
     },
