@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Home as HomeIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar: React.FC = () => {
@@ -35,15 +35,18 @@ const Navbar: React.FC = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-white/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center gap-2">
-              <span className="font-display text-2xl font-bold tracking-tight">
-                SolidBuild
+              <div className="bg-primary rounded-full p-1.5">
+                <HomeIcon className="h-5 w-5 text-white" />
+              </div>
+              <span className="font-display text-2xl font-bold tracking-tight text-primary">
+                VillageBuild
               </span>
             </Link>
           </div>
@@ -90,7 +93,7 @@ const Navbar: React.FC = () => {
       {/* Mobile menu */}
       <div 
         className={cn(
-          "md:hidden fixed inset-0 z-40 bg-background",
+          "md:hidden fixed inset-0 z-40 rural-container",
           isMobileMenuOpen ? "block animate-fade-in" : "hidden"
         )}
         style={{ top: '80px' }}
@@ -99,8 +102,8 @@ const Navbar: React.FC = () => {
           <Link 
             to="/" 
             className={cn(
-              "block py-3 text-lg border-b border-border",
-              isActive('/') && "font-medium text-foreground"
+              "block py-3 text-lg border-b border-orange-200",
+              isActive('/') && "font-medium text-primary"
             )}
           >
             Home
@@ -108,8 +111,8 @@ const Navbar: React.FC = () => {
           <Link 
             to="/about" 
             className={cn(
-              "block py-3 text-lg border-b border-border",
-              isActive('/about') && "font-medium text-foreground"
+              "block py-3 text-lg border-b border-orange-200",
+              isActive('/about') && "font-medium text-primary"
             )}
           >
             About
@@ -117,8 +120,8 @@ const Navbar: React.FC = () => {
           <Link 
             to="/services" 
             className={cn(
-              "block py-3 text-lg border-b border-border",
-              isActive('/services') && "font-medium text-foreground"
+              "block py-3 text-lg border-b border-orange-200",
+              isActive('/services') && "font-medium text-primary"
             )}
           >
             Services
@@ -126,8 +129,8 @@ const Navbar: React.FC = () => {
           <Link 
             to="/projects" 
             className={cn(
-              "block py-3 text-lg border-b border-border",
-              isActive('/projects') && "font-medium text-foreground"
+              "block py-3 text-lg border-b border-orange-200",
+              isActive('/projects') && "font-medium text-primary"
             )}
           >
             Projects
@@ -135,8 +138,8 @@ const Navbar: React.FC = () => {
           <Link 
             to="/contact" 
             className={cn(
-              "block py-3 text-lg border-b border-border",
-              isActive('/contact') && "font-medium text-foreground"
+              "block py-3 text-lg border-b border-orange-200",
+              isActive('/contact') && "font-medium text-primary"
             )}
           >
             Contact

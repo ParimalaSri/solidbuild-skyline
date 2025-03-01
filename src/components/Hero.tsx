@@ -15,21 +15,21 @@ const Hero: React.FC = () => {
   const slides: Slide[] = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=2000",
-      title: "Building Tomorrow's Landmarks Today",
-      subtitle: "Excellence in construction & real estate development",
+      image: "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&q=80&w=2000",
+      title: "Building Better Villages Together",
+      subtitle: "Excellence in rural construction & development",
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1460574283810-2aab119d8511?auto=format&fit=crop&q=80&w=2000",
-      title: "Innovative Design, Quality Construction",
-      subtitle: "Creating spaces that inspire and endure",
+      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80&w=2000",
+      title: "Rural Infrastructure Development",
+      subtitle: "Creating sustainable solutions for village communities",
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80&w=2000", 
-      title: "Redefining Urban Living",
-      subtitle: "Sustainable development for modern communities",
+      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&q=80&w=2000", 
+      title: "Traditional Meets Modern",
+      subtitle: "Blending village heritage with contemporary techniques",
     },
   ];
 
@@ -70,16 +70,16 @@ const Hero: React.FC = () => {
             className="absolute inset-0 bg-center bg-cover mask-image-gradient"
             style={{ backgroundImage: `url(${slide.image})` }}
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
       ))}
 
       {/* Content */}
       <div className="relative z-20 h-full flex flex-col justify-center px-6 sm:px-12 lg:px-16 pt-20">
         <div className="max-w-5xl mx-auto animate-fade-in opacity-0 animate-fill-both">
-          <div className="inline-block px-4 py-1.5 mb-5 text-xs sm:text-sm font-medium backdrop-blur-sm bg-white/10 rounded-full border border-white/20 animate-fade-in opacity-0 animate-fill-both animate-delay-1">
+          <div className="inline-block px-4 py-1.5 mb-5 text-xs sm:text-sm font-medium backdrop-blur-sm bg-white/20 rounded-full border border-white/30 animate-fade-in opacity-0 animate-fill-both animate-delay-1">
             <span className="text-white">
-              Transforming Skylines. Building Dreams.
+              Rural Development. Village Prosperity.
             </span>
           </div>
           
@@ -94,7 +94,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-in opacity-0 animate-fill-both animate-delay-3">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-6 py-3.5 bg-white text-primary font-medium rounded-md transition-all hover:bg-white/90 group"
+              className="inline-flex items-center justify-center px-6 py-3.5 bg-primary text-white font-medium rounded-md transition-all hover:bg-primary/90 group"
             >
               <span>Get a Free Quote</span>
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             
             <Link
               to="/projects"
-              className="inline-flex items-center justify-center px-6 py-3.5 border border-white/30 text-white backdrop-blur-sm bg-white/10 font-medium rounded-md transition-all hover:bg-white/20 group"
+              className="inline-flex items-center justify-center px-6 py-3.5 border border-white/30 text-white backdrop-blur-sm bg-secondary/20 font-medium rounded-md transition-all hover:bg-secondary/30 group"
             >
               <span>View Our Projects</span>
               <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
             className={cn(
               "w-2.5 h-2.5 rounded-full transition-all duration-300",
               index === activeSlide 
-                ? "bg-white w-8" 
+                ? "bg-primary w-8" 
                 : "bg-white/50 hover:bg-white/70"
             )}
             aria-label={`Go to slide ${index + 1}`}
